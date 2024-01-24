@@ -69,7 +69,7 @@ def double_oracle(A: np.ndarray):
                 break
 
         # min val for the column player
-        value_col = col_values.min()
+        value_col = col_values.max()
         for i in range(len(col_values)):
             if np.isclose(col_values[i], value_col) and col_flags[i] is False:
                 col_strategies.append(i)
