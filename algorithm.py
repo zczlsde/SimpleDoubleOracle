@@ -1,13 +1,23 @@
 import numpy as np
 import nashpy as nash
+import pygambit
+import random
 
+def randomize_game(size, max_payoff):
+	m = size
+	g = pygambit.Game.new_table([m,m])
+	for i in range(m):
+		for j in range(m):
+			g[i, j][0] = int(random.random() * max_payoff)
+			g[i, j][1] = -g[i, j][0]
+	return g
 
 # solve a 2-player zero-sum game with the double-oracle algorithm
 # tabular form, matrix A is the payoff of the row player
 def double_oracle(A: np.ndarray):
     rows = A.shape[0]
     cols = A.shape[1]
-
+    
     # initialize arrays of row/column flags (if true, then the corresponding strategy is in the population)
     row_flags = [True] + (rows - 1) * [False]
     col_flags = [True] + (cols - 1) * [False]
