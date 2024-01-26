@@ -1,4 +1,4 @@
-from algorithm import double_oracle
+from algorithm import double_oracle, double_oracle_with_gambit
 import argparse
 import numpy as np
 
@@ -12,4 +12,6 @@ np.set_printoptions(precision=5)
 
 rng = np.random.default_rng(1)
 row_payoff = rng.uniform(-10, 10, (args.rows, args.cols))
-double_oracle(row_payoff)
+row_payoff = np.array([[0, -1, 1], [1, 0, -1], [-1, 1, 0]])
+# double_oracle(row_payoff)
+double_oracle_with_gambit(row_payoff)
