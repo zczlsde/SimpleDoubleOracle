@@ -1,4 +1,4 @@
-# Simple_Double_Oracle
+# Simple Double Oracle
 
 To run the double oracle algorithm:
 
@@ -23,3 +23,7 @@ The double oracle algorithm works as follows:
 >
 >    **Until** No novel best response exists for either player
 >3. **Return** $\pi^t$ as the NE of the full unrestricted game
+
+Below is a regret plot for an 100*100 zero-sum game solved by this double oracle algorithm:
+
+<img src="plots/Figure_1.png" width="500px">
