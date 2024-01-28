@@ -22,6 +22,7 @@ def randomize_game(payoff):
 # solve a 2-player zero-sum game with the double-oracle algorithm
 # tabular form, matrix A is the payoff of the row player
 def double_oracle(A: np.ndarray):
+    print("Nashpy is using")
     rows = A.shape[0]
     cols = A.shape[1]
     
@@ -123,6 +124,7 @@ def double_oracle(A: np.ndarray):
             return x_row, x_col
         
 def double_oracle_with_gambit(A: np.ndarray):
+    print("Gambit is using")
     rows = A.shape[0]
     cols = A.shape[1]
     

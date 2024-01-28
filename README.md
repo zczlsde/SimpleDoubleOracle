@@ -6,9 +6,10 @@ To run the double oracle algorithm:
 usage: main.py [-h] [-r ROWS] [-c COLS]
 
 optional arguments:
-  -h, --help            show this help message and exit
+  -h, --help            Show this help message and exit
   -r ROWS, --rows ROWS  The rows of the random game matrix
   -c COLS, --cols COLS  The columns of the random game matrix
+  -g, --gambit          Use Gambit to solve LP or Nashpy
 ```
 
 The double oracle algorithm works as follows:
